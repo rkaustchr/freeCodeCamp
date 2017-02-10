@@ -1,0 +1,6 @@
+
+npm init -> cria o arq package.json
+.gitignore -> node_modules
+npm install express --save
+criar arquivo server.js
+node server.js
