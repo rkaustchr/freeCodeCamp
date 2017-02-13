@@ -1,0 +1,5 @@
+
+//Exibe todas as propriedades de um objeto
+
+var util = require('util');
+console.log(util.inspect(req, { showHidden: true, depth: null }));

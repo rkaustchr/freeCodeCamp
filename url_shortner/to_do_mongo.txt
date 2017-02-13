@@ -1,0 +1,22 @@
+
+// MONGO DB
+mkdir data
+echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+chmod a+x mongod
+
+
+/*
+// Mongo parameters
+--dbpath=data - Because it defaults to /var/db (which isn't accessible)
+--nojournal - Because mongodb usually pre-allocates 2 GB journal file (which exceeds Cloud9 disk space quota)
+--bind_ip=$IP - Because you can't bind to 0.0.0.0
+--rest - Runs on default port 28017
+
+//Drivers
+You should use the host $IP instead of localhost as your driver connection URL. For example, in Node, it is: process.env.IP
+
+//Shell Access
+To access a shell prompt for the above MongoDB run the following:
+$ mongo
+
+*/
